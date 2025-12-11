@@ -1,13 +1,13 @@
 package com.jad.mastersensorhub;
 
-import com.jad.datamanagement.IDataManager;
-import com.jad.reportgeneration.IReportGenerator;
-import com.jad.reportgeneration.ReportType;
-import com.jad.sensordata.ISensorFactory;
-import com.jad.sensordata.SensorType;
-import com.jad.userinterface.IApplication;
-import com.jad.userinterface.IUserInterface;
-import com.jad.userinterface.UserAction;
+import com.jad.data.api.IDataManager;
+import com.jad.report.api.IReportGenerator;
+import com.jad.report.api.ReportType;
+import com.jad.sensor.api.ISensorFactory;
+import com.jad.shared.model.SensorType;
+import com.jad.ui.api.IApplication;
+import com.jad.ui.api.IUserInterface;
+import com.jad.ui.api.UserAction;
 import com.jad.utils.Utils;
 
 public class Application implements IApplication {

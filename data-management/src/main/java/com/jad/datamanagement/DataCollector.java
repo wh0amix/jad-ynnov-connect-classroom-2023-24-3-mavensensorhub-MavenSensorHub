@@ -1,8 +1,8 @@
 package com.jad.datamanagement;
 
-import com.jad.sensordata.ISensor;
-import com.jad.sensordata.SensorData;
-import com.jad.sensordata.SensorType;
+import com.jad.sensor.api.ISensor;
+import com.jad.shared.model.SensorData;
+import com.jad.shared.model.SensorType;
 
 import java.util.ArrayList;
 import java.util.Collections;
