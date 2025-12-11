@@ -1,0 +1,67 @@
+@startuml packages
+!define RECTANGLE class
+
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam backgroundColor white
+
+package "com.jad.mastersensorhub" as main {
+  [Main Application]
+}
+
+package "com.jad.utils" as utils {
+  [Logger]
+  [Utils]
+}
+
+package "com.jad.sensordata" as sensor {
+  [ISensor]
+  [SensorFactory]
+  [SensorData]
+}
+
+package "com.jad.datamanagement" as data {
+  [DataManager]
+  [DataCollector]
+  [DataStorage]
+  [DataProcessor]
+}
+
+package "com.jad.reportgeneration" as report {
+  [ReportGenerator]
+  [CSVReportGenerator]
+  [TextReportGenerator]
+}
+
+package "com.jad.userinterface" as ui {
+  [UserInterface]
+  [Dashboard]
+  [Application]
+}
+
+main --> utils : utilise
+main --> sensor : utilise
+main --> data : utilise
+main --> report : utilise
+main --> ui : utilise
+
+sensor --> utils : utilise
+data --> sensor : utilise
+data --> utils : utilise
+report --> sensor : utilise
+report --> utils : utilise
+ui --> data : utilise
+ui --> sensor : utilise
+
+note right of utils
+  Module de base
+  Aucune dépendance
+end note
+
+note bottom of main
+  Point d'entrée
+  Agrège tous les modules
+end note
+
+@enduml
+```
