@@ -1,0 +1,10 @@
+package com.jad.ui.api;
+import com.jad.shared.model.SensorData;
+import java.util.List;
+public interface IUserInterface {
+    void stop();
+    void start();
+    void displayDashboard();
+    void displayHelp();
+    void displayAllData(final List<SensorData> allData);
+}
